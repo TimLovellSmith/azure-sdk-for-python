@@ -68,21 +68,21 @@
         }
     ],
     "outputs": {
-      "AZURE_TENANT_ID": {
+        "AZURE_TENANT_ID": {
             "type": "String",
             "value": "[parameters('tenantId')]"
-      },
-      "AZURE_CLIENT_ID": {
+        },
+        "AZURE_CLIENT_ID": {
             "type": "String",
             "value": "[parameters('testApplicationId')]"
-      },
-      "AZURE_CLIENT_SECRET": {
+        },
+        "AZURE_CLIENT_SECRET": {
             "type": "String",
             "value": "[parameters('testApplicationSecret')]"
-      },
-      "COMMUNICATION_CONNECTION_STRING": {
+        },
+        "COMMUNICATION_CONNECTION_STRING": {
             "type": "string",
             "value": "[listKeys(resourceId('Microsoft.Communication/CommunicationServices',variables('uniqueSubDomainName')), '2020-08-20-preview').primaryConnectionString]"
-      }
+        }
     }
 }
